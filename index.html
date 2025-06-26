@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matthew Ayanlowo | Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: purple;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin-top: 0.2em;
+        }
+
+        nav ul li {
+            margin: 0 0.em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 2em;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .col-md-6 {
+            flex: 1 1 45%;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 0.5em 0.5em 0 0;
+            padding: 0.5em 1em;
+            background: #ff4500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #cc3700;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- <h1>Matthew Ayanlowo</h1>
+        <p>Front-End Web Developer</p> -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="profile">
+            <img src="./image/imageeghsjh.jpg" alt="My Photo" />
+            <h2 id="about">About Me</h2>
+            <p>I’m a passionate front-end developer currently learning HTML, CSS, JavaScript, and WordPress. I enjoy
+                building responsive websites and solving layout problems. I’ve built 3 websites and I’m excited to take
+                on new challenges.</p>
+        </section>
+
+        <section id="projects" style="background-color: ;">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3>📚Bookdiverse</h3>
+                        <p>Cloned a responsive bookstore website to practice HTML and CSS. Focused on layout, media queries, and clean design. Deployed on Vercel to showcase my front-end development and responsive design skills.</p>
+                        <a href="http://bookstore-one-umber.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3>Palmpay.com clone</h3>
+                        <p>I created a fully responsive clone of the PalmPay website to practice web development. It features a sticky navbar, adaptive layout, and multiple sections optimized for all screen sizes.</p>
+                        <a href="http://palmpay-com-clone.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3>Nova Bank website clone</h3>
+                        <p>
+                            A responsive landing page clone of a modern digital banking platform, inspired by real-world
+                            fintech designs. This project showcases my ability to rebuild complex layouts using semantic
+                            HTML5, custom CSS, and Bootstrap 5 for responsive behavior.
+
+                            <br><br>Key features include a fully responsive navbar with dropdowns, animated hero section
+                            using
+                            Animate.css, and a clean component-based layout with cards, icons, and call-to-action
+                            buttons. I also implemented accessibility best practices and mobile responsiveness across
+                            all screen sizes.
+                        </p>
+                        <a href="https://nova-bank-liard.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 (Flexbox, Grid)</li>
+                <li>Bootstrap</li>
+                <li>Responsive Web Design</li>
+                <li>Basic JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <a href="mailto:ayanlowomatthew5@gmail.com">Email: ayanlowomatthew5@gmail.com</a>
+            <p>GitHub: <a href="https://github.com/YOURUSERNAME">Your GitHub</a></p>
+            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Matthew Ayanlowo | All Rights Reserved</p>
+    </footer>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
