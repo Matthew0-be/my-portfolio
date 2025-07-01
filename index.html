@@ -15,11 +15,12 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: purple;
+            background-color: #fdfdfd;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #4B0082;
             color: white;
             padding: 1em;
             text-align: center;
@@ -28,21 +29,47 @@
         nav ul {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             list-style: none;
-            margin-top: 0.2em;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+
+        nav ul .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3em;
+            align-items: center;
         }
 
         nav ul li {
-            margin: 0 0.em;
+            margin: 0 1em;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .container {
-            padding: 2em;
+            padding: 2em 1em;
+            color: #333;
             max-width: 1000px;
             margin: auto;
         }
@@ -115,6 +142,30 @@
                 flex-direction: column;
                 gap: 0.5em;
             }
+
+            .nav-links {
+
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #4B0082;
+                    padding: 1em 0;
+                    z-index: 999;
+                    text-align: center;
+                }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .col-md-6 {
+                flex: 1 1 30%;
+            }
         }
     </style>
 </head>
@@ -126,10 +177,14 @@
         <p>Front-End Web Developer</p> -->
         <nav id="navbar">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="logo"><a href="#"><img src="./image/My pf logo.png" alt="Logo" /></a></li>
+                <div class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
             </ul>
         </nav>
     </header>
@@ -139,25 +194,33 @@
         <section class="profile">
             <img src="./image/imageeghsjh.jpg" alt="My Photo" />
             <h2 id="about">About Me</h2>
-            <p>My name is Ayanlowo Matthew Olamide. I’m a passionate front-end developer currently learning HTML, CSS, JavaScript and Wordpress. I enjoy building responsive websites and solving layout challenges. I’ve built 3 websites so far, and I’m excited to take on new projects and grow in the field.</p>
+            <p>Hi, I’m Ayanlowo Matthew Olamide — a passionate front-end developer currently learning HTML, CSS, and
+                JavaScript. I enjoy solving layout challenges and building responsive websites. I've built 3 projects so
+                far and I’m excited to keep learning, improving, and taking on new challenges</p>
         </section>
 
-        <section id="projects" style="background-color: ;">
+        <section id="projects">
             <h2>Projects</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
                         <h3>📚Bookdiverse</h3>
-                        <p>Cloned a responsive bookstore website to practice HTML and CSS. Focused on layout, media queries, and clean design. Deployed on Vercel to showcase my front-end development and responsive design skills.</p>
-                        <a href="http://bookstore-one-umber.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                        <p>Cloned a responsive bookstore website to practice HTML and CSS. Focused on layout, media
+                            queries, and clean design. Deployed on Vercel to showcase my front-end development and
+                            responsive design skills.</p>
+                        <a href="http://bookstore-one-umber.vercel.app" target="_blank"
+                            class="btn btn-outline-danger">Live Demo</a>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="card">
                         <h3>Palmpay.com clone</h3>
-                        <p>I created a fully responsive clone of the PalmPay website to practice web development. It features a sticky navbar, adaptive layout, and multiple sections optimized for all screen sizes.</p>
-                        <a href="http://palmpay-com-clone.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                        <p>I created a fully responsive clone of the PalmPay website to practice web development. It
+                            features a sticky navbar, adaptive layout, and multiple sections optimized for all screen
+                            sizes.</p>
+                        <a href="http://palmpay-com-clone.vercel.app" target="_blank"
+                            class="btn btn-outline-danger">Live Demo</a>
                     </div>
                 </div>
 
@@ -165,17 +228,12 @@
                     <div class="card">
                         <h3>Nova Bank website clone</h3>
                         <p>
-                            A responsive landing page clone of a modern digital banking platform, inspired by real-world
-                            fintech designs. This project showcases my ability to rebuild complex layouts using semantic
-                            HTML5, custom CSS, and Bootstrap 5 for responsive behavior.
-
-                            <br><br>Key features include a fully responsive navbar with dropdowns, animated hero section
-                            using
-                            Animate.css, and a clean component-based layout with cards, icons, and call-to-action
-                            buttons. I also implemented accessibility best practices and mobile responsiveness across
-                            all screen sizes.
+                            A responsive landing page clone of a digital banking platform, built with HTML5, CSS, and
+                            Bootstrap 5. Features include an animated hero section, responsive navbar, and accessible,
+                            mobile-friendly layout.
                         </p>
-                        <a href="https://nova-bank-liard.vercel.app" target="_blank" class="btn btn-outline-danger">Live Demo</a>
+                        <a href="https://nova-bank-liard.vercel.app" target="_blank" class="btn btn-outline-danger">Live
+                            Demo</a>
                     </div>
                 </div>
             </div>
@@ -206,7 +264,12 @@
     </footer>
 
     <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
     </script>
 
 </body>
